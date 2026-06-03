@@ -1,0 +1,270 @@
+{
+  "common": {
+    "logo": "Arboray",
+    "login": "登录",
+    "requestDemo": "预约 PoC 演示",
+    "explorePlatform": "探索平台",
+    "subscribe": "订阅",
+    "allRightsReserved": "保留所有权利"
+  },
+  "navigation": {
+    "industries": "行业解决方案",
+    "roles": "角色解决方案",
+    "platform": "核心平台",
+    "trustCenter": "信任中心"
+  },
+  "industries": {
+    "animalNutrition": {
+      "title": "动物营养与饲料添加剂",
+      "description": "优化动物肠道菌群，提升饲料转化率与动物健康水平"
+    },
+    "plantProtection": {
+      "title": "植物保护与生物肥料",
+      "description": "利用功能微生物实现绿色农业，减少化学农药依赖"
+    },
+    "animalHealth": {
+      "title": "动物健康与益生菌",
+      "description": "开发高效益生菌产品，助力畜禽健康养殖"
+    }
+  },
+  "roles": {
+    "rdDirector": {
+      "title": "研发总监",
+      "description": "提升筛选成功率，支持逆向工程与菌株复用"
+    },
+    "academicPI": {
+      "title": "学术 PI / 教授",
+      "description": "防止数据丢失，支撑科研基金申请与学位论文"
+    }
+  },
+  "platform": {
+    "strainDatabase": {
+      "title": "菌株数据库 SaaS",
+      "description": "支持 CRUD 操作与 10 万 + 数据高性能渲染"
+    },
+    "aiAgent": {
+      "title": "深度挖掘 AI Agent",
+      "description": "基于 AI 的表型预测与代谢通路分析"
+    },
+    "apiGateway": {
+      "title": "Headless API 网关",
+      "description": "无缝对接企业 LIMS/ERP 系统"
+    }
+  },
+  "hero": {
+    "tag": "AI 驱动的菌株发现平台",
+    "title": "用 AI 唤醒您的",
+    "titleHighlight": "休眠菌株资产",
+    "subtitle": "分布式菌株深度挖掘与复用平台。通过多维生物数据融合，将 6 个月的湿实验筛选周期缩短至数天。",
+    "ctaPrimary": "申请 PoC 验证",
+    "ctaSecondary": "启动免费 SaaS 试用",
+    "stats": {
+      "strains": "菌株数据记录",
+      "accuracy": "表型预测准确率",
+      "reduction": "研发周期缩减",
+      "security": "数据隔离安全性"
+    },
+    "hoverHint": "悬停节点查看代谢通路连接"
+  },
+  "painPoints": {
+    "title": "行业痛点：",
+    "titleHighlight": "冻资产陷阱",
+    "subtitle": "您的菌株是否被埋没在 Excel 表格和冷冻库中？传统方法导致 95% 的珍贵菌株资源无法被有效利用。",
+    "whyChooseUs": "为什么选择 Arboray？",
+    "points": {
+      "dataSilos": {
+        "title": "数据孤岛严重",
+        "description": "菌株信息分散在多个系统、Excel 文件和研究人员的个人笔记中，难以形成统一的知识库。"
+      },
+      "lowEfficiency": {
+        "title": "筛选效率低下",
+        "description": "传统湿实验筛选需要 6 个月以上，而且成功率不足 5%，大量时间和资源被浪费。"
+      },
+      "knowledgeGap": {
+        "title": "知识传承断层",
+        "description": "核心研究人员离职后，宝贵的菌株知识和经验随之流失，重复研发成本高昂。"
+      }
+    },
+    "poc": {
+      "title": "PoC 验证框架",
+      "subtitle": "我们如何证明 Arboray 的价值？通过严格的概念验证挑战",
+      "dataCount": "提供您的历史/公开菌株数据",
+      "aiPredict": "我们的 AI 进行表型预测分析",
+      "matchRate": "预测结果与湿实验验证匹配",
+      "guarantee": "验证失败则不收取任何费用"
+    }
+  },
+  "roi": {
+    "badge": "ROI 计算器",
+    "title": "计算您的",
+    "titleHighlight": "投资回报",
+    "subtitle": "调整参数，实时查看 Arboray 能为您的研发团队节省多少时间和成本",
+    "inputs": {
+      "strainCount": "当前菌株库存规模",
+      "rdBudget": "年度研发预算"
+    },
+    "results": {
+      "activated": "休眠菌株被激活",
+      "cycleReduction": "研发周期缩减",
+      "costSaved": "预计年度湿实验成本节省"
+    },
+    "disclaimer": "* 以上数据基于客户平均反馈估算，实际结果可能因具体情况而异。预约 PoC 演示获取针对您组织的精确分析。"
+  },
+  "product": {
+    "badge": "三层架构",
+    "title": "模块化",
+    "titleHighlight": "产品架构",
+    "subtitle": "从数据管理到 AI 预测，再到企业集成，按需选择适合您的解决方案",
+    "popular": "最受欢迎",
+    "pricing": "计费方式",
+    "products": {
+      "saas": {
+        "tier": "标准 SaaS 层",
+        "title": "菌株数据库 SaaS",
+        "description": "企业级菌株数据管理平台，支持大规模数据的高效存储、检索和可视化",
+        "features": [
+          "CRUD 全功能数据管理",
+          "100K+ 数据降采样渲染",
+          "多维数据可视化分析",
+          "团队协作与权限管理",
+          "数据导入/导出工具"
+        ],
+        "pricing": "按席位订阅",
+        "cta": "开始免费试用"
+      },
+      "ai": {
+        "tier": "AI Agent 层",
+        "title": "深度挖掘 AI Agent",
+        "description": "基于先进深度学习模型的表型预测引擎，揭示菌株隐藏价值",
+        "features": [
+          "目标代谢物表型预测",
+          "代谢通路智能分析",
+          "菌株相似性聚类",
+          "功能基因组关联",
+          "预测结果可解释性报告"
+        ],
+        "pricing": "按次/按结果计费",
+        "cta": "预约演示"
+      },
+      "enterprise": {
+        "tier": "企业集成层",
+        "title": "Headless API 网关",
+        "description": "零工作流中断的企业级 API 集成，无缝连接现有系统",
+        "features": [
+          "RESTful & GraphQL API",
+          "Webhook 事件推送",
+          "LIMS 系统对接",
+          "ERP 数据同步",
+          "SSO 单点登录集成"
+        ],
+        "pricing": "企业定制",
+        "cta": "联系销售"
+      }
+    },
+    "partners": "已与全球领先的生命科学企业建立合作"
+  },
+  "footer": {
+    "description": "AI 驱动的菌株发现平台，唤醒您的休眠生物资产。",
+    "solutions": "解决方案",
+    "platform": "平台",
+    "company": "公司",
+    "newsletter": "订阅动态",
+    "newsletterDesc": "获取最新的产品更新和行业洞察",
+    "emailPlaceholder": "您的邮箱",
+    "aboutUs": "关于我们",
+    "news": "新闻动态",
+    "careers": "加入我们",
+    "contact": "联系方式",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie 设置"
+  },
+  "trustCenter": {
+    "badge": "信任中心",
+    "title": "您的菌株。您的知识产权。",
+    "titleHighlight": "100% 隔离保护。",
+    "subtitle": "Arboray 采用业界领先的数据安全架构，确保您的核心生物资产和研发数据得到最高级别的保护。",
+    "pillarsTitle": "三大",
+    "pillarsHighlight": "安全支柱",
+    "pillarsSubtitle": "我们的安全架构建立在数据本地化、本地微调和合规认证三大支柱之上",
+    "pillars": {
+      "dataLocalization": {
+        "title": "数据本地化",
+        "description": "AI 在租户隔离的数据沙箱中进行计算，使用 RAG/向量数据库技术。您的数据永远不会离开您的边界。",
+        "features": [
+          "租户级完全隔离",
+          "私有化部署选项",
+          "数据不用于跨租户训练",
+          "地理围栏数据存储"
+        ]
+      },
+      "lora": {
+        "title": "LoRA 本地微调",
+        "description": "核心序列数据通过本地微调处理，敏感的基因组和蛋白质序列永远不会传输到云端。",
+        "features": [
+          "本地模型微调",
+          "序列数据不离开边界",
+          "客户专属模型实例",
+          "推理结果加密存储"
+        ]
+      },
+      "compliance": {
+        "title": "合规与认证",
+        "description": "严格遵守生物安全和数据隐私法规，确保您的研发活动符合国际标准。",
+        "features": [
+          "ISO 27001 认证",
+          "SOC 2 Type II",
+          "GDPR 合规",
+          "生物安全法规遵从"
+        ]
+      }
+    },
+    "featuresTitle": "全方位",
+    "featuresHighlight": "安全能力",
+    "features": {
+      "encryption": {
+        "title": "端到端加密",
+        "description": "传输中和静态数据均采用 AES-256 加密"
+      },
+      "audit": {
+        "title": "访问审计",
+        "description": "完整的数据访问日志和实时监控告警"
+      },
+      "isolation": {
+        "title": "网络隔离",
+        "description": "VPC 私有网络部署，零公网暴露"
+      },
+      "backup": {
+        "title": "备份恢复",
+        "description": "多地域冗余备份，RPO<1h, RTO<4h"
+      }
+    },
+    "architectureTitle": "安全架构概览",
+    "architectureSubtitle": "多层防护确保您的数据安全",
+    "architecture": {
+      "client": "客户端层",
+      "security": "安全层",
+      "data": "数据层",
+      "webApp": "Web 应用",
+      "apiClient": "API 客户端",
+      "lims": "LIMS 集成",
+      "waf": "WAF 防火墙",
+      "auth": "身份认证",
+      "access": "访问控制",
+      "gateway": "加密网关",
+      "tenantStorage": "租户隔离存储",
+      "vectorDB": "向量数据库",
+      "localAI": "本地 AI 模型"
+    },
+    "cta": {
+      "title": "需要更详细的安全评估？",
+      "subtitle": "我们的安全团队随时准备回答您的问题，并提供针对您组织需求的定制化安全方案。",
+      "downloadWhitepaper": "下载安全白皮书",
+      "scheduleMeeting": "预约安全评估会议"
+    }
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English"
+  }
+}

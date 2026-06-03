@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  arboray-web-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: arboray-web-dev
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_SITE_URL=http://localhost:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - arboray-network
+
+networks:
+  arboray-network:
+    driver: bridge

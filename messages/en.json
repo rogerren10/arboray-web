@@ -1,0 +1,270 @@
+{
+  "common": {
+    "logo": "Arboray",
+    "login": "Sign In",
+    "requestDemo": "Request a Demo",
+    "explorePlatform": "Explore the Platform",
+    "subscribe": "Subscribe",
+    "allRightsReserved": "All rights reserved"
+  },
+  "navigation": {
+    "industries": "Industries",
+    "roles": "Roles",
+    "platform": "Platform",
+    "trustCenter": "Trust Center"
+  },
+  "industries": {
+    "animalNutrition": {
+      "title": "Animal Nutrition & Feed Additives",
+      "description": "Optimize gut microbiota, improve feed conversion and animal health"
+    },
+    "plantProtection": {
+      "title": "Plant Protection & Biofertilizers",
+      "description": "Enable green agriculture with functional microbes, reduce chemical pesticide dependency"
+    },
+    "animalHealth": {
+      "title": "Animal Health & Probiotics",
+      "description": "Develop high-efficiency probiotic products for livestock and poultry health"
+    }
+  },
+  "roles": {
+    "rdDirector": {
+      "title": "R&D Director",
+      "description": "Improve screening success rate, support reverse engineering and strain reuse"
+    },
+    "academicPI": {
+      "title": "Academic PI / Professor",
+      "description": "Prevent data loss, support research grants and doctoral theses"
+    }
+  },
+  "platform": {
+    "strainDatabase": {
+      "title": "Strain Database SaaS",
+      "description": "Support CRUD operations with 100K+ high-performance data rendering"
+    },
+    "aiAgent": {
+      "title": "Deep Mining AI Agent",
+      "description": "AI-based phenotype prediction and metabolic pathway analysis"
+    },
+    "apiGateway": {
+      "title": "Headless API Gateway",
+      "description": "Seamless integration with enterprise LIMS/ERP systems"
+    }
+  },
+  "hero": {
+    "tag": "AI-Powered Strain Discovery Platform",
+    "title": "Unlocking the Hidden Value of",
+    "titleHighlight": "Microbe Assets Through AI",
+    "subtitle": "Proprietary Microbial Library & Next-Gen Bio-Digital Native Fermentation Platform. Reduce 6-month wet lab screening to days through multi-dimensional bio-data fusion.",
+    "ctaPrimary": "Request a Demo",
+    "ctaSecondary": "Explore the Platform",
+    "stats": {
+      "strains": "Strain Data Records",
+      "accuracy": "Phenotype Prediction Accuracy",
+      "reduction": "R&D Cycle Reduction",
+      "security": "Data Isolation Security"
+    },
+    "hoverHint": "Hover over nodes to view metabolic pathway connections"
+  },
+  "painPoints": {
+    "title": "Industry Pain Points: ",
+    "titleHighlight": "The Frozen Asset Trap",
+    "subtitle": "Are your strains buried in Excel sheets and freezers? Traditional methods leave 95% of valuable strain resources underutilized.",
+    "whyChooseUs": "Why Choose Arboray?",
+    "points": {
+      "dataSilos": {
+        "title": "Severe Data Silos",
+        "description": "Strain information scattered across multiple systems, Excel files, and researchers' personal notes, making it difficult to form a unified knowledge base."
+      },
+      "lowEfficiency": {
+        "title": "Low Screening Efficiency",
+        "description": "Traditional wet lab screening takes over 6 months with less than 5% success rate, wasting significant time and resources."
+      },
+      "knowledgeGap": {
+        "title": "Knowledge Transfer Gaps",
+        "description": "After core researchers leave, valuable strain knowledge and experience are lost, leading to high repeated R&D costs."
+      }
+    },
+    "poc": {
+      "title": "PoC Validation Framework",
+      "subtitle": "How do we prove Arboray's value? Through rigorous concept validation challenges",
+      "dataCount": "Provide your historical/public strain data",
+      "aiPredict": "Our AI performs phenotype prediction analysis",
+      "matchRate": "Prediction results match wet lab validation",
+      "guarantee": "No charge if validation fails"
+    }
+  },
+  "roi": {
+    "badge": "ROI Calculator",
+    "title": "Calculate Your",
+    "titleHighlight": "Return on Investment",
+    "subtitle": "Adjust parameters to see in real-time how much time and cost Arboray can save your R&D team",
+    "inputs": {
+      "strainCount": "Current Strain Inventory",
+      "rdBudget": "Annual R&D Budget"
+    },
+    "results": {
+      "activated": "Dormant Strains Activated",
+      "cycleReduction": "R&D Cycle Reduction",
+      "costSaved": "Estimated Annual Wet Lab Cost Savings"
+    },
+    "disclaimer": "* Data estimated based on average customer feedback. Actual results may vary. Schedule a PoC demo for precise analysis tailored to your organization."
+  },
+  "product": {
+    "badge": "Three-Layer Architecture",
+    "title": "Modular",
+    "titleHighlight": "Product Architecture",
+    "subtitle": "From data management to AI prediction to enterprise integration, choose the solution that fits your needs",
+    "popular": "Most Popular",
+    "pricing": "Pricing",
+    "products": {
+      "saas": {
+        "tier": "Standard SaaS Tier",
+        "title": "Strain Database SaaS",
+        "description": "Enterprise-grade strain data management platform supporting efficient storage, retrieval and visualization of large-scale data",
+        "features": [
+          "Full-featured CRUD data management",
+          "100K+ data downsampling rendering",
+          "Multi-dimensional data visualization",
+          "Team collaboration & permission management",
+          "Data import/export tools"
+        ],
+        "pricing": "Per-seat subscription",
+        "cta": "Start Free Trial"
+      },
+      "ai": {
+        "tier": "AI Agent Tier",
+        "title": "Deep Mining AI Agent",
+        "description": "Phenotype prediction engine based on advanced deep learning models, revealing hidden strain value",
+        "features": [
+          "Target metabolite phenotype prediction",
+          "Intelligent metabolic pathway analysis",
+          "Strain similarity clustering",
+          "Functional genomics association",
+          "Explainable prediction reports"
+        ],
+        "pricing": "Per-use/per-result billing",
+        "cta": "Request a Demo"
+      },
+      "enterprise": {
+        "tier": "Enterprise Integration Tier",
+        "title": "Headless API Gateway",
+        "description": "Zero-workflow-disruption enterprise API integration, seamlessly connecting existing systems",
+        "features": [
+          "RESTful & GraphQL API",
+          "Webhook event push",
+          "LIMS system integration",
+          "ERP data synchronization",
+          "SSO single sign-on integration"
+        ],
+        "pricing": "Enterprise custom",
+        "cta": "Contact Sales"
+      }
+    },
+    "partners": "Trusted by leading life science companies globally"
+  },
+  "footer": {
+    "description": "AI-powered strain discovery platform, awakening your dormant biological assets.",
+    "solutions": "Solutions",
+    "platform": "Platform",
+    "company": "Company",
+    "newsletter": "Subscribe",
+    "newsletterDesc": "Get the latest product updates and industry insights",
+    "emailPlaceholder": "Your email",
+    "aboutUs": "About Us",
+    "news": "News",
+    "careers": "Careers",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings"
+  },
+  "trustCenter": {
+    "badge": "Trust Center",
+    "title": "Your Strains. Your IP.",
+    "titleHighlight": "100% Isolated Protection.",
+    "subtitle": "Arboray employs industry-leading data security architecture to ensure your core biological assets and R&D data receive the highest level of protection.",
+    "pillarsTitle": "Three",
+    "pillarsHighlight": "Security Pillars",
+    "pillarsSubtitle": "Our security architecture is built on three pillars: data localization, local fine-tuning, and compliance certification",
+    "pillars": {
+      "dataLocalization": {
+        "title": "Data Localization",
+        "description": "AI computes in tenant-isolated data sandboxes using RAG/vector database technology. Your data never leaves your boundary.",
+        "features": [
+          "Tenant-level complete isolation",
+          "On-premise deployment options",
+          "Data not used for cross-tenant training",
+          "Geofenced data storage"
+        ]
+      },
+      "lora": {
+        "title": "LoRA Local Fine-Tuning",
+        "description": "Core sequence data processed through local fine-tuning; sensitive genomic and protein sequences never transmitted to the cloud.",
+        "features": [
+          "Local model fine-tuning",
+          "Sequence data stays on-premise",
+          "Customer-exclusive model instances",
+          "Encrypted inference result storage"
+        ]
+      },
+      "compliance": {
+        "title": "Compliance & Certification",
+        "description": "Strictly adhere to biosafety and data privacy regulations, ensuring your R&D activities meet international standards.",
+        "features": [
+          "ISO 27001 Certified",
+          "SOC 2 Type II",
+          "GDPR Compliant",
+          "Biosafety regulation compliance"
+        ]
+      }
+    },
+    "featuresTitle": "Comprehensive",
+    "featuresHighlight": "Security Capabilities",
+    "features": {
+      "encryption": {
+        "title": "End-to-End Encryption",
+        "description": "AES-256 encryption for data in transit and at rest"
+      },
+      "audit": {
+        "title": "Access Audit",
+        "description": "Complete data access logs and real-time monitoring alerts"
+      },
+      "isolation": {
+        "title": "Network Isolation",
+        "description": "VPC private network deployment, zero public exposure"
+      },
+      "backup": {
+        "title": "Backup & Recovery",
+        "description": "Multi-region redundant backup, RPO<1h, RTO<4h"
+      }
+    },
+    "architectureTitle": "Security Architecture Overview",
+    "architectureSubtitle": "Multi-layer protection ensures your data security",
+    "architecture": {
+      "client": "Client Layer",
+      "security": "Security Layer",
+      "data": "Data Layer",
+      "webApp": "Web Application",
+      "apiClient": "API Client",
+      "lims": "LIMS Integration",
+      "waf": "WAF Firewall",
+      "auth": "Authentication",
+      "access": "Access Control",
+      "gateway": "Encryption Gateway",
+      "tenantStorage": "Tenant-Isolated Storage",
+      "vectorDB": "Vector Database",
+      "localAI": "Local AI Model"
+    },
+    "cta": {
+      "title": "Need a Detailed Security Assessment?",
+      "subtitle": "Our security team is ready to answer your questions and provide customized security solutions tailored to your organization's needs.",
+      "downloadWhitepaper": "Download Security Whitepaper",
+      "scheduleMeeting": "Schedule Security Assessment"
+    }
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English"
+  }
+}
