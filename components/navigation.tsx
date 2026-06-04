@@ -190,11 +190,9 @@ export function Navigation() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/trust-center" legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-foreground hover:bg-secondary")}>
-                    <Shield className="mr-2 h-4 w-4 text-primary" />
-                    {t("navigation.trustCenter")}
-                  </NavigationMenuLink>
+                <Link href="/trust-center" className={cn(navigationMenuTriggerStyle(), "bg-transparent text-foreground hover:bg-secondary")}>
+                  <Shield className="mr-2 h-4 w-4 text-primary" />
+                  {t("navigation.trustCenter")}
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>

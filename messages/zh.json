@@ -171,13 +171,15 @@
     "newsletter": "订阅动态",
     "newsletterDesc": "获取最新的产品更新和行业洞察",
     "emailPlaceholder": "您的邮箱",
+    "subscribe": "订阅",
     "aboutUs": "关于我们",
     "news": "新闻动态",
     "careers": "加入我们",
     "contact": "联系方式",
     "privacy": "隐私政策",
     "terms": "服务条款",
-    "cookies": "Cookie 设置"
+    "cookies": "Cookie 设置",
+    "allRightsReserved": "保留所有权利"
   },
   "trustCenter": {
     "badge": "信任中心",

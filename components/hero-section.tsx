@@ -55,6 +55,8 @@ export function HeroSection() {
     nodesRef.current = nodes
   }, [])
 
+  const hoveredNodeRef = useRef<number | null>(null)
+
   useEffect(() => {
     const canvas = canvasRef.current
     const container = containerRef.current
@@ -98,6 +100,7 @@ export function HeroSection() {
           break
         }
       }
+      hoveredNodeRef.current = foundNode
       setHoveredNode(foundNode)
     }
 
@@ -138,10 +141,11 @@ export function HeroSection() {
       })
 
       // Draw connections - only show relevant ones on hover
+      const currentHovered = hoveredNodeRef.current
       nodes.forEach((node) => {
-        const isHovered = hoveredNode === node.id
-        const isConnectedToHovered = hoveredNode !== null && node.connections.includes(hoveredNode)
-        const shouldHighlight = isHovered || isConnectedToHovered || (hoveredNode !== null && nodesRef.current[hoveredNode]?.connections.includes(node.id))
+        const isHovered = currentHovered === node.id
+        const isConnectedToHovered = currentHovered !== null && node.connections.includes(currentHovered)
+        const shouldHighlight = isHovered || isConnectedToHovered || (currentHovered !== null && nodesRef.current[currentHovered]?.connections.includes(node.id))
         
         node.connections.forEach((targetId) => {
           const target = nodes[targetId]
@@ -152,7 +156,7 @@ export function HeroSection() {
           const dist = Math.sqrt(dx * dx + dy * dy)
 
           if (dist < 250) {
-            const baseOpacity = hoveredNode === null ? 0.15 : (shouldHighlight ? 0.5 : 0.05)
+            const baseOpacity = currentHovered === null ? 0.15 : (shouldHighlight ? 0.5 : 0.05)
             const opacity = baseOpacity * (1 - dist / 250)
             
             ctx.beginPath()
@@ -167,13 +171,14 @@ export function HeroSection() {
 
       // Draw nodes
       nodes.forEach((node) => {
-        const isHovered = hoveredNode === node.id
-        const isConnectedToHovered = hoveredNode !== null && (
-          node.connections.includes(hoveredNode) || 
-          nodesRef.current[hoveredNode]?.connections.includes(node.id)
+        const currentHovered = hoveredNodeRef.current
+        const isHovered = currentHovered === node.id
+        const isConnectedToHovered = currentHovered !== null && (
+          node.connections.includes(currentHovered) || 
+          nodesRef.current[currentHovered]?.connections.includes(node.id)
         )
         const shouldHighlight = isHovered || isConnectedToHovered
-        const baseAlpha = hoveredNode === null ? 0.6 : (shouldHighlight ? 1 : 0.2)
+        const baseAlpha = currentHovered === null ? 0.6 : (shouldHighlight ? 1 : 0.2)
 
         // Subtle glow for highlighted nodes
         if (shouldHighlight) {

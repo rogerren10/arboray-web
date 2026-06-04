@@ -1,18 +1,8 @@
 import createMiddleware from 'next-intl/middleware';
-import {locales} from './i18n';
+import { routing } from './routing';
 
-export default createMiddleware({
-  locales,
-  defaultLocale: 'zh',
-  localePrefix: 'as-needed',
-  localeDetection: true
-});
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: [
-    '/',
-    '/(zh|en)/:path*',
-    '/((?!api|_next|_vercel|.*\\..*).*)',
-    '/trust-center'
-  ]
+  matcher: ['/', '/(zh|en)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
 };

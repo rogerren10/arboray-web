@@ -171,13 +171,15 @@
     "newsletter": "Subscribe",
     "newsletterDesc": "Get the latest product updates and industry insights",
     "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
     "aboutUs": "About Us",
     "news": "News",
     "careers": "Careers",
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "cookies": "Cookie Settings"
+    "cookies": "Cookie Settings",
+    "allRightsReserved": "All rights reserved"
   },
   "trustCenter": {
     "badge": "Trust Center",
