@@ -1,4 +1,5 @@
-
-nodeLinker: hoisted
-
+allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': false
+  sharp: true
 nodeLinker: hoisted
