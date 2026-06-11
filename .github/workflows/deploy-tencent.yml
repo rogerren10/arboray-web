@@ -1,0 +1,97 @@
+name: Deploy to Tencent Cloud (Docker)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
+      - name: Install dependencies
+        run: pnpm install
+      
+      - name: Build project
+        run: pnpm run build
+      
+      - name: Create deployment archive
+        run: |
+          # 创建临时部署目录
+          mkdir -p deploy-temp
+          
+          # 复制必要文件
+          cp -r .next deploy-temp/
+          cp -r public deploy-temp/
+          cp -r app deploy-temp/
+          cp -r components deploy-temp/
+          cp -r hooks deploy-temp/
+          cp -r lib deploy-temp/
+          cp -r messages deploy-temp/
+          cp -r styles deploy-temp/
+          cp package.json deploy-temp/
+          cp next.config.mjs deploy-temp/
+          cp tsconfig.json deploy-temp/
+          cp middleware.ts deploy-temp/
+          cp i18n.ts deploy-temp/
+          cp routing.ts deploy-temp/
+          cp components.json deploy-temp/
+          cp eslint.config.mjs deploy-temp/
+          cp postcss.config.mjs deploy-temp/
+          cp next-env.d.ts deploy-temp/
+          cp Dockerfile deploy-temp/
+          cp docker-compose.yml deploy-temp/
+          cp deploy.sh deploy-temp/
+          chmod +x deploy-temp/deploy.sh
+          
+          # 压缩
+          cd deploy-temp
+          zip -r ../arboray-web-deploy.zip .
+          cd ..
+      
+      - name: Deploy to Tencent Cloud via SSH
+        uses: easingthemes/ssh-deploy@v3
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.TENCENT_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.TENCENT_SERVER_IP }}
+          REMOTE_USER: ${{ secrets.TENCENT_USERNAME }}
+          SOURCE: "arboray-web-deploy.zip"
+          TARGET: "/tmp/arboray-web.zip"
+          SCRIPT_AFTER: |
+            # 停止旧容器
+            cd /opt/arboray-web
+            docker-compose down
+            
+            # 清理旧文件
+            rm -rf .next public app components hooks lib messages styles node_modules
+            
+            # 解压新文件
+            unzip -o /tmp/arboray-web.zip -d /opt/arboray-web
+            
+            # 安装依赖
+            cd /opt/arboray-web
+            pnpm install --prod
+            
+            # 重新构建并启动容器
+            docker-compose build
+            docker-compose up -d
+            
+            # 清理临时文件
+            rm /tmp/arboray-web.zip
+            
+            # 显示部署状态
+            docker ps | grep arboray-web
+            echo "✅ 部署完成！"

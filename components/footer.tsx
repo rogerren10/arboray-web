@@ -101,6 +101,29 @@ export function Footer() {
             <Link href="#" className="hover:text-foreground transition-colors">{t("cookies")}</Link>
           </div>
         </div>
+
+        {/* ICP License Info - Only show for Chinese locale */}
+        <div className="mt-8 text-center text-sm text-muted-foreground">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <a 
+              href="https://beian.miit.gov.cn/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              苏 ICP 备 2026036571 号
+            </a>
+            <a 
+              href="http://www.beian.gov.cn/portal/registerSystemInfo" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors flex items-center gap-1"
+            >
+              <img src="/police-badge.png" alt="Police Badge" className="w-4 h-4" />
+              苏公网安备 32059002008098 号
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   )
