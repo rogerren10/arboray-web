@@ -95,7 +95,7 @@ export default function Home() {
                   label: brand.brand === "cn" ? "筛选效率提升" : "Screening Efficiency",
                 },
                 {
-                  value: "6 个月 → 7 天",
+                  value: brand.brand === "cn" ? "6 个月 → 7 天" : "6 Months → 7 Days",
                   label: brand.brand === "cn" ? "研发周期缩短" : "R&D Cycle Reduction",
                 },
                 {
