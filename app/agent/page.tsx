@@ -36,7 +36,7 @@ const quickQuestions = [
   { zh: "设施蔬菜土传病害如何生物防治？", en: "How to biocontrol soil-borne diseases in greenhouse vegetables?", category: "biocontrol" },
 ];
 
-const responseTemplates = [
+const responseTemplatesCn = [
   [
     "关于您的问题，我来从专业角度为您解答：\n\n首先，这类问题在农业微生物研究中非常常见。根据已发表的研究和实践经验，建议您从以下几个方面入手：\n\n1. **样本选择**：建议从目标生境中采集新鲜样本，注意保持低温和厌氧条件\n2. **分离策略**：采用富集培养结合选择性培养基的方法，可以显著提高目标菌的分离效率\n3. **验证方法**：分离后需要通过形态观察、生理生化实验和分子生物学方法进行验证\n\n另外，如果您需要更具体的实验方案，可以使用研发助手模块，输入您的具体条件后会生成个性化方案。",
   ],
@@ -48,6 +48,21 @@ const responseTemplates = [
   ],
   [
     "非常专业的问题！以下是我的分析和建议：\n\n在农业微生物领域，这确实是一个既有挑战性又有实用价值的课题。\n\n**核心影响因素分析：**\n| 因素 | 影响程度 | 优化方向 |\n|------|----------|----------|\n| 温度 | ⭐⭐⭐⭐⭐ | 梯度优化 |\n| pH值 | ⭐⭐⭐⭐ | 缓冲体系 |\n| 接种量 | ⭐⭐⭐ | 逐步放大 |\n| 营养源 | ⭐⭐⭐⭐ | 碳氮比优化 |\n\n**下一步建议：**\n- 如果您有具体的菌株，可以直接使用工艺优化沙盒进行参数模拟\n- 如果还在筛选阶段，建议先用菌株挖掘功能找到合适的候选菌\n- 研发助手可以帮您设计完整的实验方案\n\n希望这些建议对您有帮助！如需更深入的讨论，欢迎继续提问。",
+  ],
+];
+
+const responseTemplatesEn = [
+  [
+    "Let me answer your question from a professional perspective:\n\nThis type of question is very common in agricultural microbiology research. Based on published studies and practical experience, I recommend approaching it from the following angles:\n\n1. **Sample Selection**: Collect fresh samples from the target habitat, maintaining low temperature and anaerobic conditions\n2. **Isolation Strategy**: Use enrichment culture combined with selective media to significantly improve target strain isolation efficiency\n3. **Verification Methods**: After isolation, verify through morphological observation, biochemical tests, and molecular biology methods\n\nAdditionally, for more specific experimental protocols, you can use the R&D Assistant module — it will generate a personalized plan based on your specific conditions.",
+  ],
+  [
+    "Great question! Let me analyze this in detail:\n\nFrom a microbial ecology perspective, this phenomenon is typically related to the following factors:\n\n**Main Causes:**\n- Insufficient initial inoculant activity\n- Unsuitable environmental conditions (temperature, humidity, pH)\n- Improper nutrient substrate formulation\n- Severe contamination by unwanted microorganisms\n\n**Solutions:**\n1. Optimize inoculation amount and timing\n2. Adjust environmental parameters to optimal ranges\n3. Supplement essential nutrients\n4. Maintain aseptic technique and contamination control\n\nI recommend conducting small-scale tests first to identify the most critical factors before scaling up.",
+  ],
+  [
+    "Thank you for your question! This involves multiple aspects of microbial physiology and metabolism:\n\nBased on our strain database and research experience, here are some recommendations:\n\n**Key Technical Points:**\n- Selecting the right initial strain is crucial — different strains have vastly different characteristics\n- Culture condition optimization requires multi-factor orthogonal experiments\n- Process monitoring and control are key to success\n\n**Recommended Technical Route:**\n1. First use the Strain Discovery Sandbox to find suitable candidate strains\n2. Use the R&D Assistant's screening modules for condition optimization\n3. Finally use the Process Optimization module for scale-up validation\n\nThis workflow can greatly improve R&D efficiency and reduce trial-and-error costs.",
+  ],
+  [
+    "Very professional question! Here's my analysis and recommendations:\n\nIn agricultural microbiology, this is indeed a challenging yet practically valuable topic.\n\n**Key Factor Analysis:**\n| Factor | Impact Level | Optimization Direction |\n|--------|--------------|------------------------|\n| Temperature | ⭐⭐⭐⭐⭐ | Gradient optimization |\n| pH | ⭐⭐⭐⭐ | Buffer system |\n| Inoculum Size | ⭐⭐⭐ | Stepwise scale-up |\n| Nutrient Source | ⭐⭐⭐⭐ | C/N ratio optimization |\n\n**Next Steps:**\n- If you have specific strains, you can directly use the Process Optimization Sandbox for parameter simulation\n- If still in the screening phase, use the Strain Discovery feature to find suitable candidates\n- The R&D Assistant can help design a complete experimental plan\n\nI hope these suggestions are helpful! Feel free to continue the discussion for deeper insights.",
   ],
 ];
 
@@ -119,11 +134,12 @@ export default function AgentPage() {
     setInput("");
     setIsLoading(true);
 
-    const delay = 1200 + Math.random() * 1600;
-    await new Promise((resolve) => setTimeout(resolve, delay));
+    const delay1 = 1200 + Math.random() * 1600;
+    await new Promise((resolve) => setTimeout(resolve, delay1));
 
+    const templates1 = isCn ? responseTemplatesCn : responseTemplatesEn;
     const randomTemplate =
-      responseTemplates[Math.floor(Math.random() * responseTemplates.length)][0];
+      templates1[Math.floor(Math.random() * templates1.length)][0];
 
     const newCount = usageCount + 1;
     setUsageCount(newCount);
@@ -153,20 +169,21 @@ export default function AgentPage() {
 
     setHasAskedQuestion(true);
 
-    const userMessage: Message = {
+    const userMessage2: Message = {
       id: Date.now().toString(),
       role: "user",
       content: question,
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    setMessages((prev) => [...prev, userMessage2]);
     setIsLoading(true);
 
-    const delay = 1200 + Math.random() * 1600;
-    await new Promise((resolve) => setTimeout(resolve, delay));
+    const delay2 = 1200 + Math.random() * 1600;
+    await new Promise((resolve) => setTimeout(resolve, delay2));
 
+    const templates2 = isCn ? responseTemplatesCn : responseTemplatesEn;
     const randomTemplate =
-      responseTemplates[Math.floor(Math.random() * responseTemplates.length)][0];
+      templates2[Math.floor(Math.random() * templates2.length)][0];
 
     const newCount = usageCount + 1;
     setUsageCount(newCount);

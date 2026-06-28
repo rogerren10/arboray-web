@@ -171,26 +171,26 @@ export default function StrainLibraryPage() {
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <div>
-                      <CardTitle className="text-lg">{strain.name}</CardTitle>
+                      <CardTitle className="text-lg">{isCn ? strain.name : strain.nameEn}</CardTitle>
                       <CardDescription className="text-xs italic">
                         {strain.latinName}
                       </CardDescription>
                     </div>
                     <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">
-                      {strain.category}
+                      {isCn ? strain.category : strain.categoryEn}
                     </span>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 line-clamp-2 text-sm text-slate-400">
-                    {strain.description}
+                    {isCn ? strain.description : strain.descriptionEn}
                   </p>
                   <div className="mb-3">
                     <p className="mb-1.5 text-xs text-slate-500">
                       {isCn ? "适用作物：" : "Crops:"}
                     </p>
                     <div className="flex flex-wrap gap-1">
-                      {strain.crops.slice(0, 4).map((crop) => (
+                      {(isCn ? strain.crops : strain.cropsEn).slice(0, 4).map((crop) => (
                         <span
                           key={crop}
                           className="rounded-md bg-amber-500/10 px-2 py-0.5 text-[11px] text-amber-300"
@@ -206,7 +206,7 @@ export default function StrainLibraryPage() {
                     </div>
                   </div>
                   <div className="mb-4 flex flex-wrap gap-1.5">
-                    {strain.functions.slice(0, 3).map((func) => (
+                    {(isCn ? strain.functions : strain.functionsEn).slice(0, 3).map((func) => (
                       <span
                         key={func}
                         className="rounded-md bg-slate-900 px-2 py-0.5 text-xs text-slate-400"

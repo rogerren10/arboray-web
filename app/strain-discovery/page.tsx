@@ -145,7 +145,7 @@ export default function StrainDiscoveryPage() {
               strain.traits.growthPromotion,
               strain.traits.stressTolerance,
             ],
-            name: strain.name,
+            name: isCn ? strain.name : strain.nameEn,
             areaStyle: {
               color: "rgba(16, 185, 129, 0.2)",
             },
@@ -342,7 +342,7 @@ export default function StrainDiscoveryPage() {
                             <div className="flex items-start justify-between">
                               <div>
                                 <h3 className="text-base font-semibold text-zinc-100">
-                                  {strain.name}
+                                  {isCn ? strain.name : strain.nameEn}
                                 </h3>
                                 <p className="text-xs italic text-slate-500">
                                   {strain.latinName}
@@ -350,15 +350,15 @@ export default function StrainDiscoveryPage() {
                               </div>
                               <div className="flex items-center gap-1.5">
                                 <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">
-                                  {strain.category}
+                                  {isCn ? strain.category : strain.categoryEn}
                                 </span>
                               </div>
                             </div>
                             <p className="mt-2 text-sm text-slate-400 line-clamp-2">
-                              {strain.description}
+                              {isCn ? strain.description : strain.descriptionEn}
                             </p>
                             <div className="mt-3 flex flex-wrap gap-1.5">
-                              {strain.functions.map((func) => (
+                              {(isCn ? strain.functions : strain.functionsEn).map((func) => (
                                 <span
                                   key={func}
                                   className="rounded-md bg-slate-900 px-2 py-0.5 text-xs text-slate-400"
@@ -395,7 +395,7 @@ export default function StrainDiscoveryPage() {
                     <Dna className="h-6 w-6 text-emerald-400" />
                   </div>
                   <div>
-                    <DialogTitle className="text-xl">{selectedStrain.name}</DialogTitle>
+                    <DialogTitle className="text-xl">{isCn ? selectedStrain.name : selectedStrain.nameEn}</DialogTitle>
                     <p className="text-xs italic text-slate-500">{selectedStrain.latinName}</p>
                   </div>
                 </div>
@@ -417,14 +417,14 @@ export default function StrainDiscoveryPage() {
                     <h4 className="mb-2 text-sm font-medium text-zinc-200">
                       {isCn ? "菌株简介" : "Strain Description"}
                     </h4>
-                    <p className="text-sm text-slate-400">{selectedStrain.description}</p>
+                    <p className="text-sm text-slate-400">{isCn ? selectedStrain.description : selectedStrain.descriptionEn}</p>
                   </div>
                   <div>
                     <h4 className="mb-2 text-sm font-medium text-zinc-200">
                       {isCn ? "核心功能" : "Core Functions"}
                     </h4>
                     <div className="flex flex-wrap gap-1.5">
-                      {selectedStrain.functions.map((func) => (
+                      {(isCn ? selectedStrain.functions : selectedStrain.functionsEn).map((func) => (
                         <span
                           key={func}
                           className="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400"
@@ -439,7 +439,7 @@ export default function StrainDiscoveryPage() {
                       {isCn ? "应用场景" : "Applications"}
                     </h4>
                     <ul className="space-y-1">
-                      {selectedStrain.applications.map((app) => (
+                      {(isCn ? selectedStrain.applications : selectedStrain.applicationsEn).map((app) => (
                         <li key={app} className="flex items-center gap-2 text-sm text-slate-400">
                           <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
                           {app}
@@ -454,7 +454,7 @@ export default function StrainDiscoveryPage() {
                         {isCn ? "安全等级" : "Safety Level"}
                       </div>
                       <div className="mt-1 font-medium text-zinc-200">
-                        {selectedStrain.safetyLevel}
+                        {isCn ? selectedStrain.safetyLevel : selectedStrain.safetyLevelEn}
                       </div>
                     </div>
                     <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-3">
@@ -463,7 +463,7 @@ export default function StrainDiscoveryPage() {
                         {isCn ? "保藏条件" : "Storage"}
                       </div>
                       <div className="mt-1 text-xs text-zinc-200">
-                        {selectedStrain.storageConditions}
+                        {isCn ? selectedStrain.storageConditions : selectedStrain.storageConditionsEn}
                       </div>
                     </div>
                   </div>

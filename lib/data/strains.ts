@@ -18,6 +18,16 @@ export interface Strain {
   applications: string[];
   safetyLevel: string;
   storageConditions: string;
+  // English translations
+  nameEn: string;
+  categoryEn: string;
+  sourceEn: string;
+  functionsEn: string[];
+  cropsEn: string[];
+  descriptionEn: string;
+  applicationsEn: string[];
+  safetyLevelEn: string;
+  storageConditionsEn: string;
 }
 
 export const strainLibrary: Strain[] = [
@@ -42,6 +52,16 @@ export const strainLibrary: Strain[] = [
     applications: ["水稻生物菌肥", "土壤改良剂", "叶面喷施剂"],
     safetyLevel: "一级安全",
     storageConditions: "4°C 斜面保存，6个月传代一次",
+    nameEn: "Tongguang Azotobacter",
+    categoryEn: "N-Fixing",
+    sourceEn: "Rice rhizosphere soil",
+    functionsEn: ["Nitrogen Fixation", "Growth Promotion", "Disease Resistance"],
+    cropsEn: ["Rice", "Wheat", "Corn", "Vegetables"],
+    descriptionEn:
+      "Highly efficient nitrogen-fixing strain isolated from rice rhizosphere soil with high nitrogenase activity, significantly promoting rice growth and yield.",
+    applicationsEn: ["Rice biofertilizer", "Soil conditioner", "Foliar spray agent"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "Slant culture at 4°C, subculture every 6 months",
   },
   {
     id: "TG-002",
@@ -64,6 +84,16 @@ export const strainLibrary: Strain[] = [
     applications: ["磷肥活化剂", "复合菌肥", "土壤修复"],
     safetyLevel: "一级安全",
     storageConditions: "-20°C 甘油管长期保存",
+    nameEn: "Phosphate-Solubilizing Bacillus",
+    categoryEn: "P-Solubilizing",
+    sourceEn: "Farmland rhizosphere soil",
+    functionsEn: ["Phosphorus Solubilization", "Growth Promotion", "Yield Increase"],
+    cropsEn: ["Wheat", "Corn", "Soybean", "Cotton", "Vegetables"],
+    descriptionEn:
+      "Highly efficient phosphate-solubilizing strain that converts insoluble phosphorus in soil into plant-available forms, significantly improving phosphorus fertilizer utilization.",
+    applicationsEn: ["Phosphate activator", "Compound biofertilizer", "Soil remediation"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "Glycerol stock at -20°C for long-term storage",
   },
   {
     id: "TG-003",
@@ -86,6 +116,16 @@ export const strainLibrary: Strain[] = [
     applications: ["生物农药", "种子处理剂", "土壤消毒剂"],
     safetyLevel: "一级安全",
     storageConditions: "4°C 斜面保存，3个月传代一次",
+    nameEn: "Biocontrol Pseudomonas",
+    categoryEn: "Biocontrol",
+    sourceEn: "Healthy crop rhizosphere",
+    functionsEn: ["Biocontrol", "Induced Resistance", "Growth Promotion"],
+    cropsEn: ["Vegetables", "Fruit Trees", "Rice", "Wheat", "Cotton"],
+    descriptionEn:
+      "Broad-spectrum biocontrol strain with significant inhibitory effects on various plant pathogenic fungi and bacteria, while inducing systemic plant resistance.",
+    applicationsEn: ["Biopesticide", "Seed treatment", "Soil disinfectant"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "Slant culture at 4°C, subculture every 3 months",
   },
   {
     id: "TG-004",
@@ -108,6 +148,16 @@ export const strainLibrary: Strain[] = [
     applications: ["钾肥活化剂", "矿物分解菌剂", "土壤调理剂"],
     safetyLevel: "一级安全",
     storageConditions: "-80°C 冻干粉保存",
+    nameEn: "Potassium-Solubilizing Bacillus",
+    categoryEn: "K-Solubilizing",
+    sourceEn: "Silicate mineral soil",
+    functionsEn: ["Potassium Solubilization", "Silicon Mobilization", "Growth Promotion"],
+    cropsEn: ["Rice", "Wheat", "Corn", "Soybean", "Peanut"],
+    descriptionEn:
+      "Highly efficient potassium-solubilizing strain that decomposes silicate minerals to release potassium and other trace elements such as silicon, calcium, and magnesium.",
+    applicationsEn: ["Potash activator", "Mineral decomposer", "Soil conditioner"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "Lyophilized powder at -80°C",
   },
   {
     id: "TG-005",
@@ -130,6 +180,16 @@ export const strainLibrary: Strain[] = [
     applications: ["大豆接种剂", "豆科绿肥菌剂", "牧场土壤改良"],
     safetyLevel: "一级安全",
     storageConditions: "4°C 甘露醇斜面保存",
+    nameEn: "Plant Growth-Promoting Rhizobium",
+    categoryEn: "Rhizobia",
+    sourceEn: "Legume root nodules",
+    functionsEn: ["Symbiotic N-Fixation", "Nodulation Promotion", "Quality Enhancement"],
+    cropsEn: ["Soybean", "Peanut", "Alfalfa", "Pea", "Astragalus"],
+    descriptionEn:
+      "Highly efficient nodulating and nitrogen-fixing strain, symbiotic with various legumes, significantly improving legume crop yield and protein content.",
+    applicationsEn: ["Soybean inoculant", "Legume green manure", "Pasture soil improvement"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "Mannitol slant at 4°C",
   },
   {
     id: "TG-006",
@@ -152,6 +212,16 @@ export const strainLibrary: Strain[] = [
     applications: ["盐碱地改良", "耐盐作物接种剂", "滨海生态修复"],
     safetyLevel: "一级安全",
     storageConditions: "4°C 高盐培养基保存",
+    nameEn: "Salt-Tolerant PGPR",
+    categoryEn: "Salt-Tolerant",
+    sourceEn: "Coastal saline-alkali soil",
+    functionsEn: ["Salt Tolerance & Growth", "Saline Soil Remediation", "Root Promotion"],
+    cropsEn: ["Cotton", "Sugar Beet", "Rice", "Corn", "Salt-Tolerant Vegetables"],
+    descriptionEn:
+      "Extremely salt-tolerant strain isolated from coastal saline-alkali soil, capable of normal growth under high salt conditions while secreting plant growth regulators.",
+    applicationsEn: ["Saline soil remediation", "Salt-tolerant crop inoculant", "Coastal ecological restoration"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "High-salt medium at 4°C",
   },
   {
     id: "TG-007",
@@ -174,6 +244,16 @@ export const strainLibrary: Strain[] = [
     applications: ["寒地作物菌肥", "低温堆肥接种剂", "春季育苗促进剂"],
     safetyLevel: "一级安全",
     storageConditions: "4°C 低温保存，6个月传代一次",
+    nameEn: "Cold-Adapted Pseudomonas",
+    categoryEn: "Cold-Tolerant",
+    sourceEn: "Alpine permafrost",
+    functionsEn: ["Low-Temp Growth Promotion", "Cold Region Application", "P Mobilization"],
+    cropsEn: ["Wheat", "Barley", "Potato", "Soybean", "Cold-Climate Rice"],
+    descriptionEn:
+      "Cold-tolerant strain isolated from alpine permafrost, maintaining high metabolic activity under low temperature conditions, suitable for cold-region agriculture.",
+    applicationsEn: ["Cold-region crop biofertilizer", "Low-temperature compost inoculant", "Spring seedling promoter"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "Low-temperature storage at 4°C, subculture every 6 months",
   },
   {
     id: "TG-008",
@@ -196,6 +276,16 @@ export const strainLibrary: Strain[] = [
     applications: ["生物防治剂", "堆肥腐熟剂", "土壤健康调理"],
     safetyLevel: "一级安全",
     storageConditions: "4°C 高氏一号斜面保存",
+    nameEn: "Multifunctional Streptomyces",
+    categoryEn: "Actinobacteria",
+    sourceEn: "Forest humus soil",
+    functionsEn: ["Broad-Spectrum Disease Control", "Growth Promotion", "Organic Matter Decomposition"],
+    cropsEn: ["Vegetables", "Fruit Trees", "Chinese Herbs", "Strawberry", "Watermelon"],
+    descriptionEn:
+      "Streptomyces with broad-spectrum antimicrobial activity, producing multiple antibiotic compounds while decomposing complex organic matter.",
+    applicationsEn: ["Biocontrol agent", "Compost inoculant", "Soil health amendment"],
+    safetyLevelEn: "Biosafety Level 1",
+    storageConditionsEn: "Gause's No.1 slant at 4°C",
   },
 ];
 
