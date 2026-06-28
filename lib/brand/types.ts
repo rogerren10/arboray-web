@@ -1,3 +1,5 @@
+export type Brand = "cn" | "en";
+
 export interface NavItem {
   label: string;
   href: string;
