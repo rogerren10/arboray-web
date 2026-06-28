@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
+const isCnBrand = process.env.NEXT_PUBLIC_BRAND !== "en";
+
 export const metadata: Metadata = {
-  title: "桐光智能 | AI 驱动的菌株发现与工艺优化平台",
-  description: "用 AI 唤醒您的休眠菌株资产。分布式菌株深度挖掘与复用平台，将6个月的湿实验筛选周期缩短至数天。",
+  title: isCnBrand
+    ? "桐光智能 | AI 驱动的菌株发现与工艺优化平台"
+    : "Arboray | AI-Powered Strain Discovery & Process Optimization Platform",
+  description: isCnBrand
+    ? "用 AI 唤醒您的休眠菌株资产。分布式菌株深度挖掘与复用平台，将6个月的湿实验筛选周期缩短至数天。"
+    : "Awaken dormant strain assets with AI. Distributed strain deep mining and reuse platform - shorten the 6-month wet lab screening cycle to just days.",
 };
 
 const BAIDU_TONGJI_ID = "ca7bbb454665a7f7c74aec6f6f3e1e85";
@@ -15,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-CN" className="dark">
+    <html lang={isCnBrand ? "zh-CN" : "en"} className="dark">
       <Script
         id="baidu-tongji"
         strategy="afterInteractive"

@@ -51,7 +51,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="text-3xl font-bold tracking-tight text-zinc-100 md:text-4xl">
-                {isCn ? "关于桐光智能" : "About Tongguang AI"}
+                {isCn ? "关于桐光智能" : `About ${brand.brandName}`}
               </h1>
               <p className="mt-4 text-base text-slate-400">
                 {isCn

@@ -57,7 +57,7 @@ export function Header({ brand: initialBrand }: HeaderProps) {
           <div className="flex items-center gap-10">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/tongguang-logo.png"
+                src={isCn ? "/tongguang-logo.png" : "/arboray-logo.png"}
                 alt={brand.brandName}
                 width={140}
                 height={40}
