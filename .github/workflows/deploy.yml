@@ -1,0 +1,25 @@
+name: Deploy to Tencent Cloud
+
+on:
+  push:
+    branches: [v3.2]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Tencent Cloud via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.TENCENT_HOST }}
+          username: ${{ secrets.TENCENT_USER }}
+          key: ${{ secrets.TENCENT_SSH_KEY }}
+          port: 22
+          script: |
+            cd /opt/arboray-web
+            git fetch origin
+            git checkout v3.2
+            git pull origin v3.2
+            docker compose down
+            docker compose up --build -d
+            docker system prune -f
