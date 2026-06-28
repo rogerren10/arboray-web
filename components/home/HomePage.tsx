@@ -85,7 +85,7 @@ export function HomePage({ brand }: HomePageProps) {
       title: isCn ? "工艺放大层" : "Process Scale-up",
       subtitle: isCn ? "农业场景化优化" : "Agricultural Optimization",
       description: isCn
-        : "针对堆肥、青贮、菌剂发酵等农业场景，提供碳氮比、含水率、温度等关键参数的智能优化方案。"
+        ? "针对堆肥、青贮、菌剂发酵等农业场景，提供碳氮比、含水率、温度等关键参数的智能优化方案。"
         : "Intelligent optimization for composting, silage, and microbial fermentation with key agricultural parameters.",
       icon: Beaker,
       features: isCn
