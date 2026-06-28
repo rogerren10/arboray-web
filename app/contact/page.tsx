@@ -9,6 +9,7 @@ import { Mail, MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 export default function ContactPage() {
   const brand = getBrandConfig();
   const isCn = brand.brand === "cn";
+  const contactEmail = isCn ? "contact@tongguangai.cn" : "contact@arboray.tech";
 
   const contactMethods = [
     {
@@ -31,14 +32,14 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: isCn ? "电子邮件" : "Email",
-      desc: isCn ? "发送邮件至 contact@tongguangai.cn" : "Send email to contact@tongguangai.cn",
+      desc: isCn ? "发送邮件至 contact@tongguangai.cn" : "Send email to contact@arboray.tech",
       action: (
         <a
-          href="mailto:contact@tongguangai.cn"
+          href={`mailto:${contactEmail}`}
           className="mt-4 inline-flex items-center gap-2 rounded-md bg-emerald-500/10 px-4 py-2 text-sm text-emerald-400 transition-colors hover:bg-emerald-500/20"
         >
           <Mail className="h-4 w-4" />
-          contact@tongguangai.cn
+          {contactEmail}
         </a>
       ),
     },
@@ -129,10 +130,10 @@ export default function ContactPage() {
                         {isCn ? "扫码咨询学术合作" : "Scan to inquire about academic collaboration"}
                       </p>
                       <a
-                        href="mailto:contact@tongguangai.cn"
+                        href={`mailto:${contactEmail}`}
                         className="mt-2 text-sm text-emerald-400 hover:text-emerald-300"
                       >
-                        contact@tongguangai.cn
+                        {contactEmail}
                       </a>
                     </div>
                   </div>
@@ -164,10 +165,10 @@ export default function ContactPage() {
                   {isCn ? "扫码联系企业专属顾问" : "Scan to contact your enterprise dedicated consultant"}
                 </p>
                 <a
-                  href="mailto:contact@tongguangai.cn"
+                  href={`mailto:${contactEmail}`}
                   className="text-sm text-emerald-400 hover:text-emerald-300"
                 >
-                  contact@tongguangai.cn
+                  {contactEmail}
                 </a>
               </div>
             </div>

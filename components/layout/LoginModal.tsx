@@ -87,7 +87,7 @@ export function LoginModal({ open, onOpenChange, brand }: LoginModalProps) {
   const notRegisteredMain = isCn
     ? "请联系公司商务人员开通账号"
     : "Please contact our business team to create an account";
-  const contactEmail = isCn ? "contact@tongguangai.cn" : "contact@tongguangai.cn";
+  const contactEmail = isCn ? "contact@tongguangai.cn" : "contact@arboray.tech";
   const contactLabel = isCn ? "商务合作邮箱" : "Business Email";
   const backText = isCn ? "返回登录" : "Back to Login";
   const wechatTip = isCn

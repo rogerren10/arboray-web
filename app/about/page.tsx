@@ -9,6 +9,7 @@ import { Users, Target, Lightbulb, Globe, Database, Sparkles } from "lucide-reac
 export default function AboutPage() {
   const brand = getBrandConfig();
   const isCn = brand.brand === "cn";
+  const contactEmail = isCn ? "contact@tongguangai.cn" : "contact@arboray.tech";
 
   const features = [
     {
@@ -98,10 +99,10 @@ export default function AboutPage() {
                       {isCn ? "扫码关注企业微信" : "Scan to follow our WeChat Work"}
                     </p>
                     <a
-                      href="mailto:contact@tongguangai.cn"
+                      href={`mailto:${contactEmail}`}
                       className="mt-2 text-sm text-emerald-400 hover:text-emerald-300"
                     >
-                      contact@tongguangai.cn
+                      {contactEmail}
                     </a>
                   </div>
                 </div>
