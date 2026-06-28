@@ -67,10 +67,12 @@ export function Footer({ brand }: FooterProps) {
               <Mail className="h-3.5 w-3.5" />
               <span>{isCn ? "contact@tongguangai.cn" : "contact@arboray.tech"}</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <MapPin className="h-3.5 w-3.5" />
-              <span>{isCn ? "苏州 · 中国" : "Suzhou · China"}</span>
-            </div>
+            {isCn && (
+              <div className="flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5" />
+                <span>苏州 · 中国</span>
+              </div>
+            )}
           </div>
         </div>
 
