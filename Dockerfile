@@ -10,6 +10,8 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json package-lock.json* ./
+# Set NODE_ENV to development during deps so that devDependencies (e.g. @types/nodemailer) are installed for the build stage
+ENV NODE_ENV=development
 RUN npm install
 
 # Rebuild the source code only when needed
@@ -23,7 +25,6 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN npm install --save-dev @types/nodemailer
 RUN npm run build
 
 # Production image, copy all the files and run next
