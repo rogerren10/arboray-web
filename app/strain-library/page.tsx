@@ -19,6 +19,11 @@ export default function StrainLibraryPage() {
   const [selectedCrop, setSelectedCrop] = useState<string | null>(null);
 
   const categories = [...new Set(strainLibrary.map((s) => s.category))];
+  const categoryMap: Record<string, string> = {};
+  strainLibrary.forEach((s) => { categoryMap[s.category] = s.categoryEn; });
+  const reverseCategoryMap: Record<string, string> = {};
+  strainLibrary.forEach((s) => { reverseCategoryMap[s.categoryEn] = s.category; });
+  const getCategoryLabel = (cat: string) => isCn ? cat : (categoryMap[cat] || cat);
   const allCrops = [...new Set(strainLibrary.flatMap((s) => s.crops))];
 
   // 完整的作物列表（包括目前没有对应菌株的作物）
@@ -117,7 +122,7 @@ export default function StrainLibraryPage() {
                         : "bg-slate-900 text-slate-400 border border-slate-700 hover:border-slate-600"
                     }`}
                   >
-                    {cat}
+                    {getCategoryLabel(cat)}
                   </button>
                 ))}
               </div>
